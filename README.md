@@ -9,7 +9,7 @@ After importing the package you can use
 `AutoOrientation.landscapeMode();` or
 `AutoOrientation.portraitMode();`
 
-I've used it for the a VideoScaffold, to programmatically change to landscape
+We've used it for a VideoScaffold, to programmatically change to landscape
 and back to portrait if the scaffold is disposed.
 
 ``` 
