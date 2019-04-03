@@ -10,12 +10,20 @@
 }
 
 - (void)handleMethodCall:(FlutterMethodCall*)call result:(FlutterResult)result {
-  if ([@"setLandscape" isEqualToString:call.method]) {
+  if ([@"setLandscapeRight" isEqualToString:call.method]) {
     [[UIDevice currentDevice] setValue:@(UIInterfaceOrientationLandscapeRight) forKey:@"orientation"];
   }
 
-  if ([@"setPortrait" isEqualToString:call.method]) {
+  if ([@"setLandscapeLeft" isEqualToString:call.method]) {
+      [[UIDevice currentDevice] setValue:@(UIInterfaceOrientationLandscapeLeft) forKey:@"orientation"];
+    }
+
+  if ([@"setPortraitUp" isEqualToString:call.method]) {
     [[UIDevice currentDevice] setValue:@(UIInterfaceOrientationPortrait) forKey:@"orientation"];
+  }
+
+  if ([@"setPortraitDown" isEqualToString:call.method]) {
+    [[UIDevice currentDevice] setValue:@(UIInterfaceOrientationPortraitUpsideDown) forKey:@"orientation"];
   }
 
   result(FlutterMethodNotImplemented);
