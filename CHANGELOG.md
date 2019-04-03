@@ -1,3 +1,11 @@
+## 1.0.1
+* Update Changelog
+
+## 1.0.0
+* Add more specific implementation
+* Add Android Support
+* Add Example
+
 ## 0.0.2
 
 * Create github repository and link it
