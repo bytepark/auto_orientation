@@ -2,6 +2,8 @@ package de.bytepark.autoorientation;
 
 import android.app.Activity;
 import android.content.pm.ActivityInfo;
+import android.os.Build;
+
 import io.flutter.plugin.common.MethodCall;
 import io.flutter.plugin.common.MethodChannel;
 import io.flutter.plugin.common.MethodChannel.MethodCallHandler;
@@ -36,6 +38,27 @@ public class AutoOrientationPlugin implements MethodCallHandler {
         break;
       case "setPortraitDown":
         this.activity.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_REVERSE_PORTRAIT);
+        break;
+      case "setPortraitAuto":
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR2) {
+          this.activity.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_USER_PORTRAIT);
+        } else {
+          this.activity.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_SENSOR_PORTRAIT);
+        }
+        break;
+      case "setLandscapeAuto":
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR2) {
+          this.activity.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_USER_LANDSCAPE);
+        } else {
+          this.activity.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_SENSOR_LANDSCAPE);
+        }
+        break;
+      case "setAuto":
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR2) {
+          this.activity.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_FULL_USER);
+        } else {
+          this.activity.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_FULL_SENSOR);
+        }
         break;
       default:
         result.notImplemented();

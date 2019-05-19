@@ -1,5 +1,6 @@
 #include "AppDelegate.h"
 #include "GeneratedPluginRegistrant.h"
+#include <auto_orientation/AutoOrientationPlugin.h>
 
 @implementation AppDelegate
 
