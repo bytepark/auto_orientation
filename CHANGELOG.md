@@ -1,3 +1,6 @@
+## 1.0.2
+* Fix compatibility with android
+
 ## 1.0.1
 * Update Changelog
 
