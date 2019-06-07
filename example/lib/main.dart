@@ -51,64 +51,21 @@ class _AutoOrientationDemoState extends State<AutoOrientationDemo> {
                 Expanded(
                   child: FlatButton(
                     onPressed: () {
-                      SystemChrome.setPreferredOrientations([
-                        DeviceOrientation.landscapeRight,
-                        DeviceOrientation.landscapeLeft,
-                      ]);
-                      AutoOrientation.landscapeLeftMode();
-                    },
-                    child: Padding(
-                      child: Text("Landscape left mode only"),
-                      padding: EdgeInsets.symmetric(vertical: 16.0),
-                    ),
-                  ),
-                ),
-                Expanded(
-                  child: FlatButton(
-                    onPressed: () {
-                      SystemChrome.setPreferredOrientations([
-                        DeviceOrientation.landscapeRight,
-                        DeviceOrientation.landscapeLeft,
-                      ]);
-                      AutoOrientation.landscapeRightMode();
-                    },
-                    child: Padding(
-                      child: Text("Landscape right mode only"),
-                      padding: EdgeInsets.symmetric(vertical: 16.0),
-                    ),
-                  ),
-                ),
-              ],
-            ),
-
-            Row(
-              children: <Widget>[
-                Expanded(
-                  child: FlatButton(
-                    onPressed: () {
-                      SystemChrome.setPreferredOrientations([
-                        DeviceOrientation.portraitUp,
-                        DeviceOrientation.portraitDown,
-                      ]);
-                      AutoOrientation.portraitUpMode();
-                    },
-                    child: Padding(
-                      child: Text("Portrait up mode only"),
-                      padding: EdgeInsets.symmetric(vertical: 16.0),
-                    ),
-                  ),
-                ),
-                Expanded(
-                  child: FlatButton(
-                    onPressed: () {
-                      SystemChrome.setPreferredOrientations([
-                        DeviceOrientation.portraitUp,
-                        DeviceOrientation.portraitDown,
-                      ]);
                       AutoOrientation.portraitDownMode();
                     },
                     child: Padding(
-                      child: Text("Portrait down mode only"),
+                      child: Text("Portrait UPSIDE Down"),
+                      padding: EdgeInsets.symmetric(vertical: 16.0),
+                    ),
+                  ),
+                ),
+                Expanded(
+                  child: FlatButton(
+                    onPressed: () {
+                      AutoOrientation.fullAutoMode();
+                    },
+                    child: Padding(
+                      child: Text("All modes"),
                       padding: EdgeInsets.symmetric(vertical: 16.0),
                     ),
                   ),
@@ -121,12 +78,33 @@ class _AutoOrientationDemoState extends State<AutoOrientationDemo> {
                 Expanded(
                   child: FlatButton(
                     onPressed: () {
-                      SystemChrome.setPreferredOrientations([
-                        DeviceOrientation.portraitUp,
-                        DeviceOrientation.portraitDown,
-                        DeviceOrientation.landscapeLeft,
-                        DeviceOrientation.landscapeRight,
-                      ]);
+                      AutoOrientation.landscapeAutoMode();
+                    },
+                    child: Padding(
+                      child: Text("Landscape auto"),
+                      padding: EdgeInsets.symmetric(vertical: 16.0),
+                    ),
+                  ),
+                ),
+                Expanded(
+                  child: FlatButton(
+                    onPressed: () {
+                      AutoOrientation.portraitAutoMode();
+                    },
+                    child: Padding(
+                      child: Text("Portrait auto"),
+                      padding: EdgeInsets.symmetric(vertical: 16.0),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+
+            Row(
+              children: <Widget>[
+                Expanded(
+                  child: FlatButton(
+                    onPressed: () {
                       AutoOrientation.landscapeLeftMode();
                     },
                     child: Padding(
@@ -159,12 +137,6 @@ class _AutoOrientationDemoState extends State<AutoOrientationDemo> {
                 Expanded(
                   child: FlatButton(
                     onPressed: () {
-                      SystemChrome.setPreferredOrientations([
-                        DeviceOrientation.portraitUp,
-                        DeviceOrientation.portraitDown,
-                        DeviceOrientation.landscapeLeft,
-                        DeviceOrientation.landscapeRight,
-                      ]);
                       AutoOrientation.portraitUpMode();
                     },
                     child: Padding(
@@ -176,12 +148,6 @@ class _AutoOrientationDemoState extends State<AutoOrientationDemo> {
                 Expanded(
                   child: FlatButton(
                     onPressed: () {
-                      SystemChrome.setPreferredOrientations([
-                        DeviceOrientation.portraitUp,
-                        DeviceOrientation.portraitDown,
-                        DeviceOrientation.landscapeLeft,
-                        DeviceOrientation.landscapeRight,
-                      ]);
                       AutoOrientation.portraitDownMode();
                     },
                     child: Padding(
