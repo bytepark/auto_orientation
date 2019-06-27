@@ -1,3 +1,6 @@
+## 1.0.3
+* Format code and update dependency version pinning
+
 ## 1.0.2
 * Fix compatibility with android
 
