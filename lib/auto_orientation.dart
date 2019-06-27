@@ -7,9 +7,7 @@ class AutoOrientation {
 
   // rotate the device to landscape left mode
   static landscapeLeftMode() async {
-    SystemChrome.setPreferredOrientations([
-      DeviceOrientation.landscapeLeft
-    ]);
+    SystemChrome.setPreferredOrientations([DeviceOrientation.landscapeLeft]);
     try {
       await _channel.invokeMethod('setLandscapeLeft');
     } on MissingPluginException catch (_) {
@@ -19,9 +17,7 @@ class AutoOrientation {
 
   // rotate the device to landscape right mode
   static landscapeRightMode() async {
-    SystemChrome.setPreferredOrientations([
-      DeviceOrientation.landscapeRight
-    ]);
+    SystemChrome.setPreferredOrientations([DeviceOrientation.landscapeRight]);
     try {
       await _channel.invokeMethod('setLandscapeRight');
     } on MissingPluginException catch (_) {
@@ -31,9 +27,7 @@ class AutoOrientation {
 
   // rotate the device to portrait up mode
   static portraitUpMode() async {
-    SystemChrome.setPreferredOrientations([
-      DeviceOrientation.portraitUp
-    ]);
+    SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
     try {
       await _channel.invokeMethod('setPortraitUp');
     } on MissingPluginException catch (_) {
@@ -43,9 +37,7 @@ class AutoOrientation {
 
   // rotate the device to portrait down mode
   static portraitDownMode() async {
-    SystemChrome.setPreferredOrientations([
-      DeviceOrientation.portraitDown
-    ]);
+    SystemChrome.setPreferredOrientations([DeviceOrientation.portraitDown]);
     try {
       await _channel.invokeMethod('setPortraitDown');
     } on MissingPluginException catch (_) {
