@@ -1,15 +1,12 @@
 name: auto_orientation
 description: Set the device orientation programmatically for iOS and Android
-version: 1.0.3
+version: 1.0.4
 author: Sebastian Faujour <sf@bytepark.de>
 homepage: https://github.com/bytepark/auto_orientation
 
 environment:
   sdk: ">=2.0.0 <3.0.0"
-
-dependencies:
-  flutter:
-    sdk: flutter
+  flutter: ">=1.0.0 <2.0.0"
 
 flutter:
   plugin:

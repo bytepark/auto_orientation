@@ -1,3 +1,6 @@
+## 1.0.4
+* Update flutter dependency version
+
 ## 1.0.3
 * Format code and update dependency version pinning
 
