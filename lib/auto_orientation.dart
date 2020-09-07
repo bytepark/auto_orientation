@@ -46,26 +46,28 @@ class AutoOrientation {
   }
 
   // rotate the device to portrait auto mode
-  static portraitAutoMode() async {
+  static portraitAutoMode({bool forceSensor = false}) async {
     SystemChrome.setPreferredOrientations([
       DeviceOrientation.portraitUp,
       DeviceOrientation.portraitDown,
     ]);
     try {
-      await _channel.invokeMethod('setPortraitAuto');
+      await _channel.invokeMethod(
+          forceSensor ? 'setPortraitAutoSensor' : 'setPortraitAuto');
     } on MissingPluginException catch (_) {
       return;
     }
   }
 
   // rotate the device to landscape auto mode
-  static landscapeAutoMode() async {
+  static landscapeAutoMode({bool forceSensor = false}) async {
     SystemChrome.setPreferredOrientations([
       DeviceOrientation.landscapeRight,
       DeviceOrientation.landscapeLeft,
     ]);
     try {
-      await _channel.invokeMethod('setLandscapeAuto');
+      await _channel.invokeMethod(
+          forceSensor ? 'setLandscapeAutoSensor' : 'setLandscapeAuto');
     } on MissingPluginException catch (_) {
       return;
     }
