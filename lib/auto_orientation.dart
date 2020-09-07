@@ -52,8 +52,8 @@ class AutoOrientation {
       DeviceOrientation.portraitDown,
     ]);
     try {
-      await _channel.invokeMethod(
-          forceSensor ? 'setPortraitAutoSensor' : 'setPortraitAuto');
+      await _channel
+          .invokeMethod('setPortraitAuto', {'forceSensor': forceSensor});
     } on MissingPluginException catch (_) {
       return;
     }
@@ -66,8 +66,8 @@ class AutoOrientation {
       DeviceOrientation.landscapeLeft,
     ]);
     try {
-      await _channel.invokeMethod(
-          forceSensor ? 'setLandscapeAutoSensor' : 'setLandscapeAuto');
+      await _channel
+          .invokeMethod('setLandscapeAuto', {'forceSensor': forceSensor});
     } on MissingPluginException catch (_) {
       return;
     }
