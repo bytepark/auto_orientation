@@ -21,7 +21,7 @@ class AutoOrientationDemo extends StatefulWidget {
 }
 
 class _AutoOrientationDemoState extends State<AutoOrientationDemo> {
-  TargetPlatform _platform;
+  TargetPlatform? _platform;
 
   @override
   void initState() {
@@ -72,7 +72,6 @@ class _AutoOrientationDemoState extends State<AutoOrientationDemo> {
                 ),
               ],
             ),
-
             Row(
               children: <Widget>[
                 Expanded(
@@ -99,7 +98,6 @@ class _AutoOrientationDemoState extends State<AutoOrientationDemo> {
                 ),
               ],
             ),
-
             Row(
               children: <Widget>[
                 Expanded(
