@@ -9,7 +9,9 @@ After importing the package you can use:
 `AutoOrientation.portraitDownMode();` (might not work) or  
 `AutoOrientation.portraitUpMode();` or   
 `AutoOrientation.portraitAutoMode();` or  
+`AutoOrientation.portraitAutoMode(forceSensor: true);` (Use sensor data to change direction, ignoring user's rotation preference. Much like Youtube fullscreen. Android only) or  
 `AutoOrientation.landscapeAutoMode();` or  
+`AutoOrientation.landscapeAutoMode(forceSensor: true);` (Use sensor data to change direction, ignoring user's rotation preference. Much like Youtube fullscreen. Android only) or  
 `AutoOrientation.fullAutoMode();`
 
 No need to call `SystemChrome.setPreferredOrientations` because
