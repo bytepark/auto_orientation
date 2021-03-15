@@ -49,7 +49,7 @@ class _AutoOrientationDemoState extends State<AutoOrientationDemo> {
             Row(
               children: <Widget>[
                 Expanded(
-                  child: FlatButton(
+                  child: TextButton(
                     onPressed: () {
                       AutoOrientation.portraitDownMode();
                     },
@@ -60,7 +60,7 @@ class _AutoOrientationDemoState extends State<AutoOrientationDemo> {
                   ),
                 ),
                 Expanded(
-                  child: FlatButton(
+                  child: TextButton(
                     onPressed: () {
                       AutoOrientation.fullAutoMode();
                     },
@@ -75,7 +75,7 @@ class _AutoOrientationDemoState extends State<AutoOrientationDemo> {
             Row(
               children: <Widget>[
                 Expanded(
-                  child: FlatButton(
+                  child: TextButton(
                     onPressed: () {
                       AutoOrientation.landscapeAutoMode();
                     },
@@ -86,7 +86,7 @@ class _AutoOrientationDemoState extends State<AutoOrientationDemo> {
                   ),
                 ),
                 Expanded(
-                  child: FlatButton(
+                  child: TextButton(
                     onPressed: () {
                       AutoOrientation.portraitAutoMode();
                     },
@@ -101,7 +101,7 @@ class _AutoOrientationDemoState extends State<AutoOrientationDemo> {
             Row(
               children: <Widget>[
                 Expanded(
-                  child: FlatButton(
+                  child: TextButton(
                     onPressed: () {
                       AutoOrientation.landscapeLeftMode();
                     },
@@ -112,7 +112,7 @@ class _AutoOrientationDemoState extends State<AutoOrientationDemo> {
                   ),
                 ),
                 Expanded(
-                  child: FlatButton(
+                  child: TextButton(
                     onPressed: () {
                       SystemChrome.setPreferredOrientations([
                         DeviceOrientation.portraitUp,
@@ -133,7 +133,7 @@ class _AutoOrientationDemoState extends State<AutoOrientationDemo> {
             Row(
               children: <Widget>[
                 Expanded(
-                  child: FlatButton(
+                  child: TextButton(
                     onPressed: () {
                       AutoOrientation.portraitUpMode();
                     },
@@ -144,7 +144,7 @@ class _AutoOrientationDemoState extends State<AutoOrientationDemo> {
                   ),
                 ),
                 Expanded(
-                  child: FlatButton(
+                  child: TextButton(
                     onPressed: () {
                       AutoOrientation.portraitDownMode();
                     },
