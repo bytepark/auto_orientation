@@ -1,3 +1,6 @@
+## 2.0.
+* Migrate to null safety
+
 ## 1.0.7
 * Use sensor rotation 
 
@@ -5,7 +8,7 @@
 * Revert flutter dependency version 
 
 ## 1.0.5
-* Revert flutter dependency version 
+* Revert flutter dependency version
 
 ## 1.0.4
 * Update flutter dependency version
