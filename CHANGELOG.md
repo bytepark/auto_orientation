@@ -1,3 +1,9 @@
+## 1.0.7
+* Use sensor rotation 
+
+## 1.0.6
+* Revert flutter dependency version 
+
 ## 1.0.5
 * Revert flutter dependency version 
 
