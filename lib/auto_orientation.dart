@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/services.dart';
 
 // Class that provides different modes
@@ -7,7 +9,11 @@ class AutoOrientation {
 
   // rotate the device to landscape left mode
   static landscapeLeftMode() async {
-    SystemChrome.setPreferredOrientations([DeviceOrientation.landscapeLeft]);
+    if (Platform.isAndroid) {
+      SystemChrome.setPreferredOrientations([DeviceOrientation.landscapeRight]);
+    } else {
+      SystemChrome.setPreferredOrientations([DeviceOrientation.landscapeLeft]);
+    }
     try {
       await _channel.invokeMethod('setLandscapeLeft');
     } on MissingPluginException catch (_) {
@@ -17,7 +23,11 @@ class AutoOrientation {
 
   // rotate the device to landscape right mode
   static landscapeRightMode() async {
-    SystemChrome.setPreferredOrientations([DeviceOrientation.landscapeRight]);
+    if (Platform.isAndroid) {
+      SystemChrome.setPreferredOrientations([DeviceOrientation.landscapeLeft]);
+    } else {
+      SystemChrome.setPreferredOrientations([DeviceOrientation.landscapeRight]);
+    }
     try {
       await _channel.invokeMethod('setLandscapeRight');
     } on MissingPluginException catch (_) {
@@ -83,6 +93,20 @@ class AutoOrientation {
     ]);
     try {
       await _channel.invokeMethod('setAuto');
+    } on MissingPluginException catch (_) {
+      return;
+    }
+  }
+
+  // rotate the device to landscape auto mode
+  static fullAutoButUpsideDownMode() async {
+    SystemChrome.setPreferredOrientations([
+      DeviceOrientation.landscapeRight,
+      DeviceOrientation.landscapeLeft,
+      DeviceOrientation.portraitUp,
+    ]);
+    try {
+      await _channel.invokeMethod('setAutoButUpsideDown');
     } on MissingPluginException catch (_) {
       return;
     }

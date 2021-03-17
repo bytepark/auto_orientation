@@ -70,6 +70,17 @@ class _AutoOrientationDemoState extends State<AutoOrientationDemo> {
                     ),
                   ),
                 ),
+                Expanded(
+                  child: TextButton(
+                    onPressed: () {
+                      AutoOrientation.fullAutoButUpsideDownMode();
+                    },
+                    child: Padding(
+                      child: Text("All ButUpsideDown modes"),
+                      padding: EdgeInsets.symmetric(vertical: 16.0),
+                    ),
+                  ),
+                ),
               ],
             ),
             Row(

@@ -39,6 +39,10 @@
         [[UIDevice currentDevice] setValue:@(UIInterfaceOrientationPortrait) forKey:@"orientation"];
     }
 
+    if ([@"setAutoButUpsideDown" isEqualToString:call.method]) {
+        [[UIDevice currentDevice] setValue:@(UIInterfaceOrientationMaskAllButUpsideDown) forKey:@"orientation"];
+    }
+
     [UIViewController attemptRotationToDeviceOrientation];
 
   result(FlutterMethodNotImplemented);
