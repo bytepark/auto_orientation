@@ -1,3 +1,6 @@
+## 2.0.1
+* Added SCREEN_ORIENTATION_USER and updated Library Versions.
+
 ## 2.0.0
 * Migrate to null safety
 
