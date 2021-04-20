@@ -87,4 +87,11 @@ class AutoOrientation {
       return;
     }
   }
+  static setScreenOrientationUser() async {
+    try {
+      await _channel.invokeMethod('setScreenOrientationUser');
+    } on MissingPluginException catch (_) {
+      return;
+    }
+  }
 }

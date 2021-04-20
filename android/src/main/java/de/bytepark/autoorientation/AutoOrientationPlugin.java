@@ -74,6 +74,10 @@ public class AutoOrientationPlugin implements MethodCallHandler {
           this.activity.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_FULL_SENSOR);
         }
         break;
+      case "setScreenOrientationUser": {
+        this.activity.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_USER);
+        break;
+      }
       default:
         result.notImplemented();
         break;

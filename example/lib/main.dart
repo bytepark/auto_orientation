@@ -155,7 +155,22 @@ class _AutoOrientationDemoState extends State<AutoOrientationDemo> {
                   ),
                 ),
               ],
-            )
+            ),
+            Row(
+              children: <Widget>[
+                Expanded(
+                  child: TextButton(
+                    onPressed: () {
+                      AutoOrientation.setScreenOrientationUser();
+                    },
+                    child: Padding(
+                      child: Text("Screen Orientation User mode"),
+                      padding: EdgeInsets.symmetric(vertical: 16.0),
+                    ),
+                  ),
+                ),
+              ],
+            ),
           ],
         ),
       ),
