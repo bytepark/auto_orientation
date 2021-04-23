@@ -1,6 +1,6 @@
 name: auto_orientation
 description: Set the device orientation programmatically for iOS and Android
-version: 2.0.0
+version: 2.0.1
 homepage: https://github.com/bytepark/auto_orientation
 
 environment:
