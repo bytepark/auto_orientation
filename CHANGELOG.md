@@ -1,3 +1,6 @@
+## 2.0.2
+* Fixes hanging on `await` calls
+
 ## 2.0.1
 * Added SCREEN_ORIENTATION_USER and updated Library Versions.
 
