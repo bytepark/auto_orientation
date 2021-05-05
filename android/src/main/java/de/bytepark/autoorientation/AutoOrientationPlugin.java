@@ -82,5 +82,6 @@ public class AutoOrientationPlugin implements MethodCallHandler {
         result.notImplemented();
         break;
     }
+    result.success(null);
   }
 }
