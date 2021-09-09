@@ -3,7 +3,14 @@ package de.bytepark.autoorientation;
 import android.app.Activity;
 import android.content.pm.ActivityInfo;
 import android.os.Build;
+import android.content.Context;
 
+import androidx.annotation.NonNull;
+
+import io.flutter.embedding.engine.plugins.FlutterPlugin;
+import io.flutter.embedding.engine.plugins.activity.ActivityAware;
+import io.flutter.embedding.engine.plugins.activity.ActivityPluginBinding;
+import io.flutter.plugin.common.BinaryMessenger;
 import io.flutter.plugin.common.MethodCall;
 import io.flutter.plugin.common.MethodChannel;
 import io.flutter.plugin.common.MethodChannel.MethodCallHandler;
@@ -11,17 +18,49 @@ import io.flutter.plugin.common.MethodChannel.Result;
 import io.flutter.plugin.common.PluginRegistry.Registrar;
 
 /** AutoOrientationPlugin */
-public class AutoOrientationPlugin implements MethodCallHandler {
+public class AutoOrientationPlugin implements FlutterPlugin, ActivityAware, MethodCallHandler {
   Activity activity;
+  private Context applicationContext;
+  private MethodChannel methodChannel;
 
   /** Plugin registration. */
+  @SuppressWarnings("deprecation")
   public static void registerWith(Registrar registrar) {
     final MethodChannel channel = new MethodChannel(registrar.messenger(), "auto_orientation");
-    channel.setMethodCallHandler(new AutoOrientationPlugin(registrar.activity()));
+    AutoOrientationPlugin instance = new AutoOrientationPlugin();
+    instance.activity = registrar.activity();
+    channel.setMethodCallHandler(instance);
   }
 
-  private AutoOrientationPlugin(Activity activity) {
-    this.activity = activity;
+  @Override
+  public void onAttachedToEngine(FlutterPluginBinding binding) {
+    onAttachedToEngine(binding.getApplicationContext(), binding.getBinaryMessenger());
+  }
+
+  private void onAttachedToEngine(Context applicationContext, BinaryMessenger messenger) {
+    this.applicationContext = applicationContext;
+    methodChannel = new MethodChannel(messenger, "auto_orientation");
+    methodChannel.setMethodCallHandler(this);
+  }
+
+  @Override
+  public void onAttachedToActivity(@NonNull ActivityPluginBinding binding) {
+    this.activity = binding.getActivity();
+  }
+
+  @Override
+  public void onDetachedFromActivityForConfigChanges() {
+
+  }
+
+  @Override
+  public void onReattachedToActivityForConfigChanges(@NonNull ActivityPluginBinding binding) {
+
+  }
+
+  @Override
+  public void onDetachedFromActivity() {
+    this.activity = null;
   }
 
   @Override
@@ -83,5 +122,11 @@ public class AutoOrientationPlugin implements MethodCallHandler {
         break;
     }
     result.success(null);
+  }
+
+  @Override
+  public void onDetachedFromEngine(FlutterPluginBinding binding) {
+    applicationContext = null;
+    methodChannel.setMethodCallHandler(null);
   }
 }
