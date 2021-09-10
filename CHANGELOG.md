@@ -1,3 +1,6 @@
+## 2.1.0
+* Migrate to Android V2 embedding
+
 ## 2.0.2
 * Fixes hanging on `await` calls
 
