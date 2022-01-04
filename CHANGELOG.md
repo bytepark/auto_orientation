@@ -1,3 +1,7 @@
+## 2.2.1
+* Fix double rotation by removing the preferredOrientation
+* Cleaned up example app
+
 ## 2.2.0
 * Remove Android V1 embedding
 * Upgrade example app, update Gradle dependency

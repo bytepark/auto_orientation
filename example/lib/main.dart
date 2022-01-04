@@ -51,32 +51,6 @@ class _AutoOrientationDemoState extends State<AutoOrientationDemo> {
                 Expanded(
                   child: TextButton(
                     onPressed: () {
-                      AutoOrientation.portraitDownMode();
-                    },
-                    child: Padding(
-                      child: Text("Portrait UPSIDE Down"),
-                      padding: EdgeInsets.symmetric(vertical: 16.0),
-                    ),
-                  ),
-                ),
-                Expanded(
-                  child: TextButton(
-                    onPressed: () {
-                      AutoOrientation.fullAutoMode();
-                    },
-                    child: Padding(
-                      child: Text("All modes"),
-                      padding: EdgeInsets.symmetric(vertical: 16.0),
-                    ),
-                  ),
-                ),
-              ],
-            ),
-            Row(
-              children: <Widget>[
-                Expanded(
-                  child: TextButton(
-                    onPressed: () {
                       AutoOrientation.landscapeAutoMode();
                     },
                     child: Padding(
@@ -158,6 +132,17 @@ class _AutoOrientationDemoState extends State<AutoOrientationDemo> {
             ),
             Row(
               children: <Widget>[
+                Expanded(
+                  child: TextButton(
+                    onPressed: () {
+                      AutoOrientation.fullAutoMode();
+                    },
+                    child: Padding(
+                      child: Text("All modes"),
+                      padding: EdgeInsets.symmetric(vertical: 16.0),
+                    ),
+                  ),
+                ),
                 Expanded(
                   child: TextButton(
                     onPressed: () {
