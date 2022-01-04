@@ -1,3 +1,8 @@
+## 2.2.0
+* Remove Android V1 embedding
+* Upgrade example app, update Gradle dependency
+* cleanup*
+
 ## 2.1.0
 * Migrate to Android V2 embedding
 

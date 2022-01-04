@@ -15,22 +15,12 @@ import io.flutter.plugin.common.MethodCall;
 import io.flutter.plugin.common.MethodChannel;
 import io.flutter.plugin.common.MethodChannel.MethodCallHandler;
 import io.flutter.plugin.common.MethodChannel.Result;
-import io.flutter.plugin.common.PluginRegistry.Registrar;
 
 /** AutoOrientationPlugin */
 public class AutoOrientationPlugin implements FlutterPlugin, ActivityAware, MethodCallHandler {
   Activity activity;
   private Context applicationContext;
   private MethodChannel methodChannel;
-
-  /** Plugin registration. */
-  @SuppressWarnings("deprecation")
-  public static void registerWith(Registrar registrar) {
-    final MethodChannel channel = new MethodChannel(registrar.messenger(), "auto_orientation");
-    AutoOrientationPlugin instance = new AutoOrientationPlugin();
-    instance.activity = registrar.activity();
-    channel.setMethodCallHandler(instance);
-  }
 
   @Override
   public void onAttachedToEngine(FlutterPluginBinding binding) {
