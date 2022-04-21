@@ -36,7 +36,7 @@
     }
     
     if ([@"setAuto" isEqualToString:call.method]) {
-        [[UIDevice currentDevice] setValue:@(UIInterfaceOrientationPortrait) forKey:@"orientation"];
+        [[UIDevice currentDevice] setValue:@(UIInterfaceOrientationUnknown) forKey:@"orientation"];
     }
 
     [UIViewController attemptRotationToDeviceOrientation];
