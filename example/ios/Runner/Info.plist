@@ -10,6 +10,8 @@
 	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
+	<key>UIRequiresFullScreen</key>
+<true/>
 	<key>CFBundleName</key>
 	<string>auto_orientation_example</string>
 	<key>CFBundlePackageType</key>
