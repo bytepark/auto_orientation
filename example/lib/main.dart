@@ -1,7 +1,6 @@
-import 'package:flutter/cupertino.dart';
+import 'package:auto_orientation/auto_orientation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:auto_orientation/auto_orientation.dart';
 
 void main() {
   runApp(
