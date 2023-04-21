@@ -1,3 +1,12 @@
+## 2.3.0
+* Swift Conversion of iOS plugin incl. iOS 16 Support
+
+## 2.2.2
+* add UIRequiresFullScreen to example plist for iPad support
+* Fix All Modes on iOS
+* replace jcenter to mavenCentral
+* Fix iOS 16 orientation
+
 ## 2.2.1
 * Fix double rotation by removing the preferredOrientation
 * Cleaned up example app
