@@ -58,6 +58,6 @@ public class AutoOrientationPlugin: NSObject, FlutterPlugin {
             resolvedOrientation = UIInterfaceOrientation.unknown
             break
         }
-        UIDevice.current.setValue(resolvedOrientation, forKey: "orientation")
+        UIDevice.current.setValue(resolvedOrientation.rawValue, forKey: "orientation")
     }
 }

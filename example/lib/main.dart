@@ -50,32 +50,6 @@ class _AutoOrientationDemoState extends State<AutoOrientationDemo> {
                 Expanded(
                   child: TextButton(
                     onPressed: () {
-                      AutoOrientation.landscapeAutoMode();
-                    },
-                    child: Padding(
-                      child: Text("Landscape auto"),
-                      padding: EdgeInsets.symmetric(vertical: 16.0),
-                    ),
-                  ),
-                ),
-                Expanded(
-                  child: TextButton(
-                    onPressed: () {
-                      AutoOrientation.portraitAutoMode();
-                    },
-                    child: Padding(
-                      child: Text("Portrait auto"),
-                      padding: EdgeInsets.symmetric(vertical: 16.0),
-                    ),
-                  ),
-                ),
-              ],
-            ),
-            Row(
-              children: <Widget>[
-                Expanded(
-                  child: TextButton(
-                    onPressed: () {
                       AutoOrientation.landscapeLeftMode();
                     },
                     child: Padding(
@@ -137,7 +111,7 @@ class _AutoOrientationDemoState extends State<AutoOrientationDemo> {
                       AutoOrientation.fullAutoMode();
                     },
                     child: Padding(
-                      child: Text("All modes"),
+                      child: Text("All modes (Android only)"),
                       padding: EdgeInsets.symmetric(vertical: 16.0),
                     ),
                   ),
@@ -148,7 +122,33 @@ class _AutoOrientationDemoState extends State<AutoOrientationDemo> {
                       AutoOrientation.setScreenOrientationUser();
                     },
                     child: Padding(
-                      child: Text("Screen Orientation User mode"),
+                      child: Text("Screen Orientation User mode (Android only)"),
+                      padding: EdgeInsets.symmetric(vertical: 16.0),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+            Row(
+              children: <Widget>[
+                Expanded(
+                  child: TextButton(
+                    onPressed: () {
+                      AutoOrientation.landscapeAutoMode();
+                    },
+                    child: Padding(
+                      child: Text("Landscape auto (Android only)"),
+                      padding: EdgeInsets.symmetric(vertical: 16.0),
+                    ),
+                  ),
+                ),
+                Expanded(
+                  child: TextButton(
+                    onPressed: () {
+                      AutoOrientation.portraitAutoMode();
+                    },
+                    child: Padding(
+                      child: Text("Portrait auto (Android only)"),
                       padding: EdgeInsets.symmetric(vertical: 16.0),
                     ),
                   ),

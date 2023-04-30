@@ -1,3 +1,6 @@
+## 2.3.1
+* Fix for iOS < 16 after rewrite in Swift.
+
 ## 2.3.0
 * Swift Conversion of iOS plugin incl. iOS 16 Support
 
