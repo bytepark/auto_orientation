@@ -22,6 +22,10 @@ rootProject.allprojects {
 apply plugin: 'com.android.library'
 
 android {
+    // Condition for namespace compatibility in AGP 8
+    if (project.android.hasProperty("namespace")) {
+        namespace 'de.bytepark.autoorientation'
+    }
     compileSdkVersion 31
 
     defaultConfig {
