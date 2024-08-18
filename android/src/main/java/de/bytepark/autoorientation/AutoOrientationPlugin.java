@@ -97,6 +97,12 @@ public class AutoOrientationPlugin implements FlutterPlugin, ActivityAware, Meth
         break;
       }
       case "setAuto":
+        Boolean forceSensor = call.<Boolean>argument("forceSensor");
+        if (forceSensor != null && forceSensor) {
+          this.activity.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_FULL_SENSOR);
+          break;
+        }
+        
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR2) {
           this.activity.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_FULL_USER);
         } else {

@@ -62,9 +62,9 @@ class AutoOrientation {
   }
 
   // rotate the device to landscape auto mode
-  static fullAutoMode() async {
+  static fullAutoMode({bool forceSensor = false}) async {
     try {
-      await _channel.invokeMethod('setAuto');
+      await _channel.invokeMethod('setAuto', {'forceSensor': forceSensor});
     } on MissingPluginException catch (_) {
       return;
     }
